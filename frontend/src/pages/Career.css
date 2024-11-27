@@ -1,0 +1,113 @@
+
+.homecareer
+{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+}
+
+
+
+
+
+
+.career-container {
+    margin: 3px auto;
+    width: 50%;
+    max-width: 900px;
+    background-color: white;
+    border-radius: 1px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  .openings {
+    text-align:justify;
+    font-style:italic;
+    font-variant: small-caps;
+    
+  }
+  
+  
+  .career-details, .career-details2 {
+    margin: 2px 100px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.6);
+  }
+
+  .career-details h6, .career-details2 h6 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #041423;
+  }
+  .career-details Button, .career-details2  Button
+  {
+     
+  width:1%;
+  position:absolute;
+  left:80%;
+  
+  }
+  
+
+
+  @media (max-width: 1199px) {
+    .career-container {
+        width: 60%;
+    }
+
+    .career-details, .career-details2 {
+        margin: 2px 60px;
+    }
+}
+
+
+@media (max-width: 991px) {
+    .career-container {
+        width: 75%;
+    }
+
+    .career-details, .career-details2 {
+        margin: 2px 40px;
+    }
+}
+
+
+@media (max-width: 767px) {
+    .career-container {
+        width: 90%;
+    }
+
+    .career-details, .career-details2 {
+        margin: 2px 20px;
+    }
+
+    .career-details h6, .career-details2 h6 {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media (max-width: 575px) {
+    .career-container {
+        width: 90%;
+        margin: 10 10px;
+    }
+
+    .career-details, .career-details2 {
+        margin: 2px 10px;
+    }
+
+    .career-details h6, .career-details2 h6 {
+        font-size: 1rem;
+    }
+    .career-details Button, .career-details2  Button
+    {
+       
+      left: 70%;
+    
+    }
+}
+  
+ 
+

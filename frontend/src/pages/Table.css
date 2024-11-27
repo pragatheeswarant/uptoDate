@@ -1,0 +1,125 @@
+
+.TableHead {
+  background-color: rgba(12, 5, 5, 0.36);
+}
+
+th {
+  cursor: pointer;
+}
+
+table {
+  margin: 10px auto;
+  border-radius: 5px;
+  table-layout: fixed;
+  word-wrap: break-word;
+}
+.tablefilter{
+  display: flex;
+   margin: 20px;
+   width:1px;
+    gap: 20px;
+   margin-Bottom: 20px;
+}
+
+tr:hover {
+  background: #88951845;
+}
+
+#erase, #log {
+  cursor: pointer;
+  width: 100px;
+  position: absolute; 
+}
+
+#erase { right: 230px; top: 245px; }
+#log { right: 90px; top: 245px; }
+
+
+@media (max-width: 1199px) {
+  table {
+    width: 90%; 
+    table-layout:auto;
+  }
+
+
+
+
+}
+
+
+@media (max-width: 900px) {
+  table {
+    width: 90%; 
+    table-layout:auto;
+  }
+
+  #erase, #log {
+    top: 80px; 
+  }
+
+  #erase { right: 210px; }
+  #log { right: 90px; }
+  
+  th {
+    font-size: 14px; 
+  }
+
+  tr:hover {
+    background: #88951845; 
+  }
+}
+
+@media (max-width : 700px)
+{
+
+  #erase 
+  { 
+  border-style: none;
+  left:390px;
+  top: 100px;
+   }
+   .erase{
+    display: none;
+   }
+   #log{
+    border-style: none;
+    left:420px;
+    top: 100px;
+   }
+  .log { 
+    display: none;
+    border-style: none;
+   }
+
+}
+
+@media (max-width : 600px) {
+
+.tablefilter{
+  display:grid;
+ margin-bottom: 70px;
+  margin-top: -10px;
+  padding:20px ;
+}
+#erase 
+  { 
+  border-style: none;
+  left:50px;
+  top: 520px;
+   }
+   .erase{
+    display: none;
+   }
+   #log{
+    border-style: none;
+    left:80px;
+    top: 520px;
+   }
+  .log { 
+    display: none;
+    border-style: none;
+   }
+
+}
+
+

@@ -1,0 +1,103 @@
+#a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .homeabout {
+    top: 20px;
+    right: 530px;
+    
+  }
+  
+  .homeabout:hover {
+    background-color: #388e3c;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    font-family: 'Fantasy', sans-serif;
+  }
+
+  .about {
+    margin-top: 0px;
+    text-align: justify;
+    font-size: 1.1rem;
+    color: #ececec;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  padding: 15px; 
+  background-color: #3e3838e8; 
+  border-radius: 8px;
+
+  }
+  
+  .about img {
+    border-radius: 50%;
+    max-width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+
+  .team {
+    margin-top: 40px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .team-member {
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+ 
+  @media (max-width: 1200px) {
+    .team-member {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .homeabout {
+        top: 20px;
+        right: 280px;
+    }
+  
+   
+  }
+
+  @media (max-width: 700px) {
+
+    .homeabout {
+        top: 20px;
+        right: 230px;
+    }
+
+
+  }
+
+  @media (max-width: 570px) {
+
+    .homeabout {
+        top: 20px;
+        right: 170px;
+    }
+
+
+  }
+
+  
+  @media (max-width: 480px) {
+    .about {
+      font-size: 1rem;
+    }
+  
+    .homeabout {
+        top: 10px;
+        right: 100px;
+    
+    }
+  }
