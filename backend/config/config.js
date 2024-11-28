@@ -1,6 +1,6 @@
 module.exports = {
   development: {
-    username: 'praga',
+    username: 'root',
     password: '',
     database: 'formdata',
     host: 'localhost',  

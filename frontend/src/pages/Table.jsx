@@ -1,6 +1,7 @@
   import React, { useEffect, useState } from 'react';
   import './Table.css';
   import { useNavigate } from 'react-router-dom';
+  import { useSelector, useDispatch } from 'react-redux';
   import {
     Table,
     TableBody,
@@ -24,13 +25,14 @@
   import LogoutIcon from '@mui/icons-material/Logout';
   import SearchIcon from '@mui/icons-material/Search';
   import InputAdornment from '@mui/material/InputAdornment';
+  import { fetchUserData, deleteUser } from '../redux/services/userSlice';
 
 
 
     const Tabled = () => 
       {  
-      
-      const [userData, setUserData] = useState([]);
+        const dispatch = useDispatch();
+        const { data: userData, loading, error } = useSelector((state) => state.users);
       const [selectedRow, setSelectedRow] = useState(null);
       const [sortOrder, setSortOrder] = useState({});
       const [search, setSearch] = useState('');
@@ -49,16 +51,8 @@
 
     
       useEffect(() => {
-        fetch('http://localhost:5000/users')
-          .then((response) => response.json())  
-          .then((data) => {
-            setUserData(data);  
-            setFilter(data);  
-          })
-          .catch((error) => {
-            console.log('Error fetching user data:', error);  
-          });
-      }, []);  
+        dispatch(fetchUserData());
+      }, [dispatch]);
       
 
       const searchFilter = () => {
@@ -171,33 +165,10 @@
 
       const deleteRow = () => {
         if (selectedRow !== null) {
-          const userId = filter[selectedRow].id; // Get the ID of the selected user
-      
-          fetch(`http://localhost:5000/users/${userId}`, {
-            method: 'DELETE',
-          })
-            .then((response) => response.json())
-            .then((data) => {
-              if (data.message === 'User deleted successfully') {
-               
-                
-                const updatedFilter = filter.filter((user, index) => index !== selectedRow);
-                const updatedData = userData.filter((user, index) => index !== selectedRow);
-                
-                setFilter(updatedFilter);
-                setUserData(updatedData);
-                setSelectedRow(null); // Deselect the row
-                
-                setdeleteMessage('Row deleted successfully!');
-                setSnackbarOpen(true);
-              } else {
-                alert('Error deleting user');
-              }
-            })
-            .catch((error) => {
-              console.error('Error:', error);
-              alert('An error occurred while deleting the user.');
-            });
+          const userId = filter[selectedRow].id;
+          dispatch(deleteUser(userId));
+          setdeleteMessage('Row deleted successfully!');
+          setSnackbarOpen(true);
         } else {
           alert('No row selected!');
         }
