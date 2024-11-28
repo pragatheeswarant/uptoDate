@@ -26,6 +26,7 @@
   import SearchIcon from '@mui/icons-material/Search';
   import InputAdornment from '@mui/material/InputAdornment';
   import { fetchUserData, deleteUser } from '../redux/services/userSlice';
+  
 
 
 
@@ -271,7 +272,7 @@
     
             
             <Select value={ageFilter} onChange={(e) => setAgeFilter(e.target.value)} size='small' displayEmpty variant='standard' >
-              <MenuItem value="">Ages</MenuItem>
+              <MenuItem value="">Age</MenuItem>
               <MenuItem value="21-25">21 to 25</MenuItem>
               <MenuItem value="26-30">26 to 30</MenuItem>
               <MenuItem value="31-40">31 to 40</MenuItem>
@@ -280,7 +281,7 @@
 
           
     <Select value={genderFilter} onChange={(e) => setGenderFilter(e.target.value)} size='small' displayEmpty variant="standard" >
-              <MenuItem value="">Genders</MenuItem>
+              <MenuItem value="">Gender</MenuItem>
               <MenuItem value="Male">Male</MenuItem>
               <MenuItem value="Female">Female</MenuItem>
               <MenuItem value="Other">Other</MenuItem>
@@ -290,7 +291,7 @@
 
             
     <Select value={positionFilter} onChange={(e) => setPositionFilter(e.target.value)} size='small' displayEmpty variant="standard" >
-              <MenuItem value="">Positions</MenuItem>
+              <MenuItem value="">Position</MenuItem>
               <MenuItem value="automation tester">Automation Tester</MenuItem>
               <MenuItem value="software developer">Software Developer</MenuItem>
               <MenuItem value="software tester">Software Tester</MenuItem>
